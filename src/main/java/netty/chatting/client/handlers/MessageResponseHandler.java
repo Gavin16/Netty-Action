@@ -2,7 +2,7 @@ package netty.chatting.client.handlers;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
-import multiThread.nioTest.netty.chatting.packets.MessageResponsePacket;
+import netty.chatting.packets.MessageResponsePacket;
 
 public class MessageResponseHandler extends SimpleChannelInboundHandler<MessageResponsePacket> {
 

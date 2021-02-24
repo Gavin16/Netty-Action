@@ -92,11 +92,13 @@ public class NettyClient {
                     String line = sc.nextLine();
                     // 发送消息中截取 接收用户ID 和 消息内容
                     if(StringUtils.isEmpty(line)) continue;
-                    String[] idAndMsg = line.split(" ");
+                    String[] idAndMsg = line.split(",");
 
                     MessageRequestPacket requestPacket = new MessageRequestPacket();
                     requestPacket.setToUserId(idAndMsg[0]);
-                    requestPacket.setMsg(idAndMsg[1]);
+                    if(idAndMsg.length > 1){
+                        requestPacket.setMsg(idAndMsg[1]);
+                    }
                     channel.writeAndFlush(PacketCoder.encode(requestPacket));
                 }
             }
@@ -114,7 +116,6 @@ public class NettyClient {
 
     public static void main(String[]args) throws Exception {
         String host = "127.0.0.1";
-        host = "192.168.0.110";
         int port = 8001;
 
         NettyClient nettyClient = new NettyClient(host, port);

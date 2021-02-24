@@ -2,9 +2,9 @@ package netty.chatting.client.handlers;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
-import multiThread.nioTest.netty.chatting.packets.HeartBeatRequestPacket;
-import multiThread.nioTest.netty.chatting.packets.LoginResponsePacket;
-import multiThread.nioTest.netty.chatting.utils.LoginUtil;
+import netty.chatting.packets.HeartBeatRequestPacket;
+import netty.chatting.packets.LoginResponsePacket;
+import netty.chatting.utils.LoginUtil;
 
 import java.util.concurrent.TimeUnit;
 

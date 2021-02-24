@@ -2,7 +2,7 @@ package netty.chatting.client.handlers;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
-import multiThread.nioTest.netty.chatting.packets.HeartBeatResponsePacket;
+import netty.chatting.packets.HeartBeatResponsePacket;
 
 public class HeartBeatResponseHandler extends SimpleChannelInboundHandler<HeartBeatResponsePacket> {
 
